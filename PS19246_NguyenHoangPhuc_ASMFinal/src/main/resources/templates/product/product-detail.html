@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{index :: dynamic( ~{::title},~{::#page-content} )}">
+
+<head>
+<meta charset="UTF-8">
+<title>[[${product.product.name}]]</title>
+</head>
+
+<body>
+	<!--Body Content-->
+	<div class="mt-5" id="page-content">
+            <!--MainContent-->
+            <div id="MainContent" class="main-content" role="main">
+                <!--Breadcrumb-->
+                <div class="bredcrumbWrap">
+                    <div class="container breadcrumbs" role="navigation" aria-label="breadcrumbs">
+                        <a href="/" title="Back to the home page">Home</a><span
+                            aria-hidden="true">›</span><span>[[${product.product.name}]]</span>
+                    </div>
+                </div>
+                <!--End Breadcrumb-->
+
+                <div id="ProductSection-product-template" class="product-template__container prstyle1 container">
+                    <!--product-single-->
+                    <div class="product-single">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="product-details-img">
+                                    <div class="zoompro-wrap product-zoom-right pl-20">
+                                        <div class="zoompro-span">
+                                            <img class="blur-up lazyload zoompro"
+                                                th:data-zoom-image="@{|/images/product/${product.images[0]}|}"
+                                                alt=""
+                                                th:src="@{|/images/product/${product.images[0]}|}" />
+                                        </div>
+                                        <div class="product-buttons">
+                                            <a href="#" class="btn prlightbox" title="Zoom"><i
+                                                    class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="lightboximages">
+	                                    <th:block th:each="i : ${product.images}">
+	                                        <a th:href="@{|/images/product/${i}|}"
+	                                            data-size="1462x2048"></a>
+	                                    </th:block>
+                                    </div>
+                                    <div class="product-thumb">
+                                        <div id="gallery" class="product-dec-slider-2 product-tab-left">
+                                        	<th:block th:each="i : ${product.images}">
+	                                            <a th:data-image="@{|/images/product/${i}|}"
+	                                                th:data-zoom-image="@{|/images/product/${i}|}"
+	                                                class="slick-slide slick-cloned" data-slick-index="-4"
+	                                                aria-hidden="true" tabindex="-1">
+	                                                <img class="blur-up lazyload"
+	                                                    th:src="@{|/images/product/${i}|}"
+	                                                    alt="" />
+	                                            </a>
+                                        	</th:block>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="product-single__meta">
+                                    <h1 class="product-single__title">[[${product.product.name}]]</h1>
+                                    <div class="product-nav clearfix">
+                                        <a href="#" class="next" title="Next"><i class="fa fa-angle-right"
+                                                aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="prInfoRow">
+                                        <div class="product-stock"> <span class="instock ">In Stock</span> </div>
+                                    </div>
+                                    <p class="product-single__price product-single__price-product-template">
+                                        <span class="product-price__price product-price__price-product-template">
+                                            <span id="ProductPrice-product-template"><span
+                                                    class="money">[[${#numbers.formatDecimal(product.product.price,0,'COMMA',0,'POINT')}]]</span></span>
+                                        </span>
+                                    </p>
+                                    <div class="product-single__description rte">
+                                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure
+                                            and praising pain was born and I will give you a complete account of the
+                                            system, and expound the actual teachings of the great explorer of the truth,
+                                            the master-builder of human happiness.</p>
+                                    </div>
+                                    <form method="post" action="http://annimexweb.com/cart/add"
+                                        id="product_form_10508262282" accept-charset="UTF-8"
+                                        class="product-form product-form-product-template hidedropdown"
+                                        enctype="multipart/form-data">
+
+                                        <!-- Product Action -->
+                                        <div class="product-action clearfix">
+                                            <div class="product-form__item--submit">
+                                                <button th:attr=" ng-click=@{|cart.add(${product.product.id})|} " type="button" name="add" class="btn product-form__cart-submit">
+                                                    <span id="AddToCartText-product-template">Thêm vào giỏ hàng</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End Product Action -->
+                                    </form>
+                                    <div class="display-table shareRow">
+                                        <div class="display-table-cell medium-up--one-third">
+                                            <div class="wishlist-btn">
+                                                <a class="wishlist add-to-wishlist" href="#" title="Add to Wishlist"><i
+                                                        class="icon anm anm-heart-l" aria-hidden="true"></i> <span>Thêm
+                                                        Vào Yêu Thích</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="display-table-cell text-right">
+                                            <div class="social-sharing">
+                                                <a target="_blank" href="#"
+                                                    class="btn btn--small btn--secondary btn--share share-facebook"
+                                                    title="Share on Facebook">
+                                                    <i class="fa fa-facebook-square" aria-hidden="true"></i> <span
+                                                        class="share-title" aria-hidden="true">Facebook</span>
+                                                </a>
+                                                <a target="_blank" href="#"
+                                                    class="btn btn--small btn--secondary btn--share share-twitter"
+                                                    title="Tweet on Twitter">
+                                                    <i class="fa fa-twitter" aria-hidden="true"></i> <span
+                                                        class="share-title" aria-hidden="true">Tweet</span>
+                                                </a>
+
+
+                                                <a href="#"
+                                                    class="btn btn--small btn--secondary btn--share share-pinterest"
+                                                    title="Share by Email" target="_blank">
+                                                    <i class="fa fa-envelope" aria-hidden="true"></i> <span
+                                                        class="share-title" aria-hidden="true">Email</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <p class="product-type"><span class="lbl">Loại hàng:</span> 
+                                    	<th:block th:each="c : ${product.product.productCategories}">
+                                    		<a th:href="@{|/product/list?cid=${c.category.id}|}" title="Women's">[[${c.category.name}]]</a></p>
+                                    	</th:block>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--End-product-single-->
+                        <!--Product Tabs-->
+                        <div class="tabs-listing">
+                            <ul class="product-tabs">
+                                <li rel="tab1"><a class="mt-3 tablink text-uppercase product-price__price product-price__price-product-template">Mô tả sản phẩm</a></li>
+                            </ul>
+                            <div class="tab-container mb-5">
+                                <div id="tab1" class="tab-content">
+                                    <div class="product-description rte">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type specimen book. It has survived not only five centuries, but also
+                                            the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Product Tabs-->
+
+                        <!--Related Product Slider-->
+                        <div class="related-product grid-products">
+                            <header class="section-header">
+                                <h2 class="section-header__title text-center h2"><span>Sản phẩm liên quan</span></h2>
+                                
+                            </header>
+                            <div class="productPageSlider">
+                                <th:block th:each="p : ${productsRcm}">
+                                	<div class="col-12 item">
+                                    <!-- start product image -->
+                                    <div class="product-image">
+                                        <!-- start product image -->
+                                        <a th:href="@{|/product/detail/${p.product.id}|}">
+                                            <!-- image -->
+                                            <img class="product-rcm primary blur-up lazyload"
+                                                th:data-src="@{|/images/product/${p.images[0]}|}"
+                                                th:src="@{|/images/product/${p.images[0]}|}" th:alt="${p.product.name}"
+                                                th:title="${p.product.name}">
+                                            <!-- End image -->
+                                            <!-- Hover image -->
+                                            <img class="hover blur-up lazyload"
+                                                th:data-src="@{|/images/product/${p.images[1]}|}"
+                                                th:src="@{|/images/product/${p.images[1]}|}" th:alt="${p.product.name}"
+                                                th:title="${p.product.name}">
+                                            <!-- End hover image -->
+                                        </a>
+                                        <!-- end product image -->
+
+                                        <!-- Start product button -->
+                                        <form class="variants add">
+                                            <button th:attr=" ng-click=@{|cart.add(${p.product.id})|} " class="btn btn-addto-cart" type="button" tabindex="0">ADD TO CART</button>
+                                        </form>
+                                        <div class="button-set">
+                                            <div class="wishlist-btn">
+                                                <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                    <i class="icon anm anm-heart-l"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- end product button -->
+                                    </div>
+                                    <!-- end product image -->
+
+                                    <!--start product details -->
+                                    <div class="product-details text-center">
+                                        <!-- product name -->
+                                        <div class="product-name">
+                                            <a th:href="@{|/product/detail/${p.product.id}|}">[[${p.product.name}]]</a>
+                                        </div>
+                                        <!-- End product name -->
+                                        <!-- product price -->
+                                        <div class="product-price">
+                                            <span class="price">[[${p.product.price}]]</span>
+                                        </div>
+                                        <!-- End product price -->
+
+                                        <!-- Variant -->
+                                        <ul class="swatches">
+                                            <li th:each="i : ${p.images}" class="swatch medium rounded"><img
+                                                    th:src="@{|/images/product/${i}|}" alt="image" />
+                                            </li>
+                                        </ul>
+                                        <!-- End Variant -->
+                                    </div>
+                                    <!-- End product details -->
+                                </div>
+                                </th:block>
+                            </div>
+                        </div>
+                        <!--End Related Product Slider-->
+
+                       
+                    </div>
+                    <!--#ProductSection-product-template-->
+                </div>
+                <!--MainContent-->
+            </div>
+            <!--End Body Content-->
+        </div>
+</body>
+
+</html>
