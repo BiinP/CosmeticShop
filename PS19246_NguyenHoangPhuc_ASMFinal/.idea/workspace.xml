@@ -39,9 +39,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Phuc Nguyen/git/CosmeticShop/PS19246_NguyenHoangPhuc_ASMFinal",
+    "last_opened_file_path": "C:/Users/Phuc Nguyen/git/CosmeticShop/PS19246_NguyenHoangPhuc_ASMFinal/src/main/resources/local.env",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -50,7 +52,7 @@
   }
 }]]></component>
   <component name="RunManager" selected="Spring Boot.Ps19246NguyenHoangPhucAsmFinalApplication">
-    <configuration name="All in PS19246_NguyenHoangPhuc_ASMFinal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in PS19246_NguyenHoangPhuc_ASMFinal" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="PS19246_NguyenHoangPhuc_ASMFinal" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -69,7 +71,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ps19246NguyenHoangPhucAsmFinalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="Ps19246NguyenHoangPhucAsmFinalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" />
       <module name="PS19246_NguyenHoangPhuc_ASMFinal" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.asm.Ps19246NguyenHoangPhucAsmFinalApplication" />
       <extension name="coverage">
@@ -78,16 +81,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="env" PATH="src/main/resources/local.env" />
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.Ps19246NguyenHoangPhucAsmFinalApplication" />
-        <item itemvalue="JUnit.All in PS19246_NguyenHoangPhuc_ASMFinal" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="JUnit.All in PS19246_NguyenHoangPhuc_ASMFinal" />
+      <item itemvalue="Spring Boot.Ps19246NguyenHoangPhucAsmFinalApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -99,6 +111,7 @@
       <updated>1650436741246</updated>
       <workItem from="1650436746205" duration="210000" />
       <workItem from="1650437045363" duration="861000" />
+      <workItem from="1650437981297" duration="1661000" />
     </task>
     <servers />
   </component>
