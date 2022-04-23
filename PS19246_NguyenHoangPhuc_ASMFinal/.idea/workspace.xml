@@ -39,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Phuc Nguyen/git/PMovie/P-Movie.com",
+    "last_opened_file_path": "C:/Users/Phuc Nguyen/git/CosmeticShop/PS19246_NguyenHoangPhuc_ASMFinal/src/main/resources/postgresql.env",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,6 +51,11 @@
     "spring.configuration.checksum": "7478f312ddb03198fce81c118f887d63"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Phuc Nguyen\git\CosmeticShop\PS19246_NguyenHoangPhuc_ASMFinal\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.Ps19246NguyenHoangPhucAsmFinalApplication">
     <configuration name="All in PS19246_NguyenHoangPhuc_ASMFinal" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="PS19246_NguyenHoangPhuc_ASMFinal" />
@@ -90,6 +95,7 @@
         <ENTRIES>
           <ENTRY IS_ENABLED="true" PARSER="env" PATH="src/main/resources/local.env" />
           <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+          <ENTRY IS_ENABLED="true" PARSER="env" PATH="src/main/resources/postgresql.env" />
         </ENTRIES>
       </extension>
       <method v="2">
@@ -112,6 +118,8 @@
       <workItem from="1650436746205" duration="210000" />
       <workItem from="1650437045363" duration="861000" />
       <workItem from="1650437981297" duration="1705000" />
+      <workItem from="1650688116259" duration="474000" />
+      <workItem from="1650702769496" duration="1548000" />
     </task>
     <servers />
   </component>
